@@ -1,3 +1,12 @@
+import sys, subprocess
+
+try:
+    import sklearn  # noqa: F401
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
+
+
+
 import gradio as gr
 import pickle
 import pandas as pd
